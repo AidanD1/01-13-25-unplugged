@@ -106,6 +106,8 @@ body {
 ul, 
 ol {
         list-style-type: none;
+        margin: 0;
+        padding: 0;
 }
  
 a {
@@ -155,6 +157,7 @@ address {
   display: flex;
   justify-content: center;
   padding: 15px 0;
+  background-color: #202322;
 }
 header .content-wrappper{
   display: flex;
@@ -181,6 +184,7 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #202322;
 }
 footer .content-wrappper{
   width: 55%;
@@ -213,6 +217,32 @@ aside{
   justify-content: center;
 }
 
+aside .form {
+  margin-top: 30px;
+}
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .features{
   display: flex;
   justify-content: center;
@@ -235,6 +265,7 @@ aside{
 .reviews{
   display: flex;
   justify-content: center;
+  background-color: #2a423a;
 }
 
 .reviews h3{
@@ -254,6 +285,7 @@ aside{
 .contact-section{
   display: flex;
   justify-content: center;
+  background-color: #2a423a;
 }
 
 /* ************FAQ Page ************ */
