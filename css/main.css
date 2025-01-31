@@ -210,6 +210,10 @@ footer .copyright{
 .hero-area{
   display: flex;
   justify-content: center;
+  background: url(../img/unplugged-retreat.jpg);
+  background-size: cover;
+  background-position: center;
+
 }
 
 aside{
@@ -246,6 +250,9 @@ input[type=button] {
 .features{
   display: flex;
   justify-content: center;
+  background: url('../img/unplugged-retreat-features.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .features article{
