@@ -83,6 +83,8 @@ textarea {
   resize: vertical;
 }
 
+
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -101,6 +103,9 @@ html {
 body {
         font-family: 'Open Sans', sans-serif;
         font-size: 1em;
+        color: #e2e3ed;
+        text-align: left;
+        background-color: #202322;
 }
  
 ul, 
@@ -118,12 +123,16 @@ a {
 h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 1.875em;
+      font-weight: 500;
+      margin: 0;
 }
  
 h3, 
 h4 {
       font-family: 'Poppins', sans-serif;
       font-size: 1.125em;
+      font-weight: 500;
+      margin: 20px 0;
 }
  
 p {
@@ -132,23 +141,19 @@ p {
 }
  
 img {
- 
+  width: 100%
 }
  
 figure {
- 
+  margin: 0;
 }
  
 address {
           font-style: normal;
 }
  
-.content-wrapper {
- 
-}
-
 .content-wrappper {
-  outline: 3px dotted red;
+  margin: 50px 0;
   width: 90%;
 }
 
@@ -166,11 +171,22 @@ header .content-wrappper{
   align-items: center;
   margin: 0;
 }
+
+header figure {
+  width: 60%;
+}
+
 .header-divider {
-  width: 60%
+  width: 60%;
+  background: #3a3a3a;
+  height: 1px;
+  margin: 10px 0 20px 0;
 } 
 header nav{
   width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 header nav ul{
@@ -190,18 +206,33 @@ footer .content-wrappper{
   width: 55%;
   margin: 50px 0;
 }
+footer .contact{
+  margin-bottom: 50px;
+}
 footer p{
   margin: 0;
 }
-footer .social-icons{
+footer .social-icons {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+footer .social-icons p {
+  background-color: #527158;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 footer .social p{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+footer .social-icons p i{
+  font-size: 1.3125em;
 }
 footer .copyright{
   margin: 20px 0;
@@ -213,7 +244,14 @@ footer .copyright{
   background: url(../img/unplugged-retreat.jpg);
   background-size: cover;
   background-position: center;
+  min-height: 500px;
+}
 
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 aside{
@@ -255,6 +293,10 @@ input[type=button] {
   background-position: center;
 }
 
+.features h2 {
+  margin-bottom: 60px;
+}
+
 .features article{
   width: 60%;
   margin: 30px 0;
@@ -266,8 +308,15 @@ input[type=button] {
   flex-flow: row wrap;
   align-items: center;
 }
+
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
+}
+
 .features p{
   margin: 0;
+  text-align: center;
 }
 .reviews{
   display: flex;
@@ -275,7 +324,12 @@ input[type=button] {
   background-color: #2a423a;
 }
 
-.reviews h3{
+.reviews h2 {
+  margin-bottom: 40px;
+  line-height: 1;
+}
+
+.reviews h3 {
   width: 52%;
   margin: 20px 0;
 }
@@ -315,6 +369,7 @@ input[type=button] {
 .faq{
   display: flex;
   justify-content: center;
+  background-color: #527158;
 }
 
 .faq .content-wrappper{
@@ -325,11 +380,17 @@ input[type=button] {
 }
 .faq h2{
   margin-bottom: 40px;
+  line-height: 1;
 }
 .faq-content{
   margin-bottom: 50px;
   flex-basis: 45%;
 }
+
+.faq-content h4 {
+  line-height: 1.333;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -426,6 +487,17 @@ input[type=button] {
     }
   }
 
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
+
   header {
     padding: 33px 0;
   }
@@ -434,6 +506,10 @@ input[type=button] {
     justify-content: space-between;
   }
   
+header figure {
+  width: 30%;
+}
+
   header nav {
     width: 20%;
   }
@@ -451,6 +527,7 @@ input[type=button] {
     margin: 50px 0;
     display: flex;
     justify-content: space-between;
+    align-content: flex-start;
 }
 
     aside .content-wrapper .form-description,
@@ -466,8 +543,23 @@ input[type=button] {
       flex-basis: 50%;
     }
  
+    .features h2 {
+      margin-bottom: 20px;
+    }
+  
+    .features .features items{
+      align-items: flex-start;
+    }
+    
     .features .features-item-description {
         width: 50%;
+    }
+
+    .features article {
+      display: flex;
+      align-items: center;
+      flex-flow: column wrap;
+      flex-basis: 50%;
     }
  
     .features i {
@@ -480,15 +572,26 @@ input[type=button] {
       justify-content: space-between;
     }
     
+    .reviews h2 {
+      width: 85%;
+    }
+
+    .reviews article figure,
     .reviews article div {
         width: 50%;         
     }
  
+    .reviews h3 {
+      width: 75%;
+      margin: 0;
+    }
     
     footer .content-wrapper {
         width: 65%;
         margin: 100px 0;
     }
+    
+
     
     .footer-content {
       display: flex;
@@ -496,12 +599,27 @@ input[type=button] {
       align-items: center;
     }
  
+
+    footer h4 {
+      font-size: 1.5em;
+      margin-bottom: 40px;
+    }
+
+    footer p {
+      line-height: 1.285;
+    }
+
+    footer .social-icons {
+      width: 12.5em;
+      justify-content: space-between;
+    }
+
     footer .contact {
         margin-bottom: 0;
     }
  
     footer .copyright {
-        width: 100%
+        width: 100%;
     }
 
 /* ==========================================================================
@@ -512,10 +630,11 @@ input[type=button] {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding-top: 20px;
 }
 
 .mission-content p {
-    width: 45%
+    width: 45%;
 }
 
 .map figure {
@@ -523,13 +642,18 @@ input[type=button] {
 }
 
 .contact-section .content-wrapper h2 {
-    width: 80%
+    width: 80%;
 }
 
 .contact-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.contact-content h4 {
+  font-size: 1.5em;
+
 }
 
 /* ==========================================================================
@@ -546,21 +670,47 @@ input[type=button] {
 .faq h2 {
     width: 100%;
 }
+
+.faq h4,
+.faq p {
+    font-size: .875em;
+    line-height: 1.125;
+  }
+
   @media only screen and (min-width: 1200px) {
     /*Desktop styles here*/
     
+  /* General styles */
     .content-wrapper {
       max-width: 960px;
     }
 
+    /* Header */
     header {
       padding: 15px 0;
     }
 
+    h2 {
+      font-size: 2.25em;
+    }
+
+    h3,
+    h4 {
+      font-size: 1.875em;
+    }
+
+    p {
+      font-size: 1.125em;
+      line-height: 1.333;
+    }
+
+    /* Hero */
     .hero-area h1 {
       width: 80%;
+      font-size: 3.75em;
     }
-    
+
+    /* Aside */
     aside .content-wrapper {
       justify-content: space-around;
     }
@@ -570,6 +720,12 @@ input[type=button] {
     width: 30%;
   }
 
+  .form-description p {
+    font-size: 1.125em;
+  }
+
+  /*Features*/
+  
   .features h2 {
     width: 90%;
   }
@@ -578,10 +734,14 @@ input[type=button] {
     flex-basis: 33%;
   }
 
+/* Reviews */
   .reviews article div {
     width: 42%;
   }
   
+  footer h4 {
+    font-size: 1.875em;
+  }
 /* ==========================================================================
   About Page
   ========================================================================== */
@@ -595,12 +755,23 @@ input[type=button] {
     padding-bottom: 37.5%;
   }
 
+  contact-content h4 {
+    font-size: 1.875em;
+  }
+
   /* ==========================================================================
   FAQ Page
   ========================================================================== */
 
   .faq h2 {
     width: 100%;
+    font-size: 3em;
+  }
+
+  .faq h4,
+  .faq p {
+    font-size: 1.125em;
+    line-height: 1;
   }
 }
 
